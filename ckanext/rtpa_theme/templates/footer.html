@@ -1,0 +1,37 @@
+<footer role="contentinfo" class="footer">
+
+    <div id="inner-footer" class="clearfix">
+
+        <div id="widget-footer" class="clearfix row">
+            <div id="text-3" class="widget col-sm-2 widget_text"><h4 class="widget-title">&nbsp;</h4>			<div class="textwidget"><img src="/images/120x80_eu_flag.jpg" alt="eu-flag" width="120" height="80" class="aligncenter size-full"></div>
+            </div>
+            <div id="text-4" class="widget col-sm-6 widget_text"><h4 class="widget-title">&nbsp;About</h4>			<div class="textwidget"><p style="text-align: justify">The information available on this website is a property of the contributing authors from the ROUTE-TO-PA Consortium and does not necessarily reflect the view of the European Commission. The&nbsp;information in this website is provided "as is", and no guarantee or&nbsp;warranty is given that the information is fit for any particular purpose. The user uses the information at its sole risk and liability.</p>
+                    <br>
+                    <p style="text-align: justify">This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No&nbsp;645860.</p></div>
+            </div>
+            <div id="nav_menu-3" class="widget col-sm-4 widget_nav_menu"><h4 class="widget-title">Quick Links</h4><div class="menu-quick-links-container"><ul id="menu-quick-links" class="menu"><li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"><a href="http://tet.dev/index.php/about-route-to-pa/">About ROUTE-TO-PA</a></li>
+                        <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="http://tet.dev/index.php/terms-of-use/">Terms of use</a></li>
+                        <li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="http://tet.dev/index.php/privacy-policy/">Privacy Policy</a></li>
+                        <li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="http://tet.dev/index.php/feedback/">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <nav class="clearfix">
+        </nav>
+
+    </div> <!-- end #inner-footer -->
+
+    <div class="footer-copyright">
+        © RTPA – TET
+    </div> <!-- end .footer-copyright -->
+
+    {% block footer_debug %}
+        {% if g.debug %}
+            {% include 'snippets/debug.html' %}
+        {% endif %}
+    {% endblock %}
+
+    {% include 'snippets/debug.html' %}
+</footer>
