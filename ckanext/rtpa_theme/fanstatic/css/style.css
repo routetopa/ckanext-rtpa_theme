@@ -1,0 +1,500 @@
+/*
+ * Base style for TET platform
+ */
+
+.dark-primary-color    { background: #1976D2; }
+.default-primary-color { background: #2196F3; }
+.light-primary-color   { background: #BBDEFB; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #00BCD4; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #727272; }
+.divider-color         { border-color: #B6B6B6; }
+
+/* ========================================================================
+                                START HEADER
+========================================================================= */
+
+.header {
+    background: #b6b6b6;
+    margin-bottom: 40px;
+}
+.header .logo {
+    color: #111;
+    line-height: 1em;
+    font-size: 40px;
+    margin: 15px 0px;
+}
+.header .logo img {
+    width: 60px;
+    display: inline;
+    margin-right: 15px;
+}
+.header .logo a {
+    color: #111;
+    font-weight: 800;
+}
+.header .logo span span {
+    color: #ab0000;
+}
+
+.header .tet_img_header {
+    position: relative;
+}
+
+.header .tet_header_version {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    text-shadow: 1px 1px 0 #B6B6B6;
+    text-align: right;
+}
+
+.header .tet_header_pic {
+    background-image: url(/images/header.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-color: #FFFFFF;
+    height: 356px;
+}
+
+.header .tet_console_right {
+    float: right;
+    padding-left: 14px;
+}
+
+.header .tet_console {
+}
+
+.header .tet_console_body {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0 14px 0 0;
+}
+.tet_console_item {
+    display: inline-block;
+    position: relative;
+    margin: 0 15px 0 5px;
+    vertical-align: middle;
+    text-align: left;
+    cursor: pointer;
+}
+
+.tet_console_item:hover {
+    border-color: #d9e0e6;
+    cursor: pointer;
+}
+
+.tet_console_item:last-child {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.tet_console_item a {
+    color: #FFFFFF;
+}
+.tet_console_item a:hover {
+    text-decoration: none;
+    color: #BBDEFB;
+}
+/*Console select language styles*/
+.tet_console_lang {
+    padding: 4px 10px;
+    margin-bottom: 20px;
+    margin-top: -15px;
+}
+.tet_console_lang_item {
+    margin-top: 0px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+li.tet_console_lang_item {
+    padding: 3px 8px;
+}
+li.tet_console_lang_item:hover {
+
+}
+.tet_console_lang_item span {
+    display: inline-block;
+    padding-left: 22px;
+    background-position: 0 20px;
+}
+div.tet_console_lang_item:hover > span {
+    color: #BBDEFB;
+}
+.tet_console_divider {
+    line-height: 1px;
+    height: 1px;
+    background: #d9e0e6;
+    margin: 3px 0px 2px;
+}
+
+.tet_console_lang .tet_console_lang_item {
+    height: 25px;
+}
+
+.tet_console_lang .tet_console_lang_item span {
+   color: #1976D2;
+}
+ 
+.tet_console_lang_us,
+.tet_console_lang_en {
+    background: url(/images/flags/GB.png) no-repeat 0px 3px;
+}
+
+.tet_console_lang_fr {
+    background: url(/images/flags/FR.png) no-repeat 0px 3px;
+}
+
+.tet_console_lang_it {
+    background: url(/images/flags/IT.png) no-repeat 0px 3px;
+}
+
+.tet_console_lang_nl {
+    background: url(/images/flags/NL.png) no-repeat 0px 3px;
+}
+
+/* Languages tooltip */
+.tet_language_popup {
+    position: absolute;
+    right: 0px;
+    width: 80px;
+    z-index: 100;
+    background-color: #FFFFFF;
+}
+.tet_language_popup .tet_tooltip {
+    top: 32px !important;
+    padding-top: 2px;
+    right: 0px;
+}
+.tet_language_popup .tet_tooltip_tail span {
+    background-position: 1px -6px;
+}
+.tet_language_popup .tet_tooltip .tet_tooltip_body {
+    max-width: 340px;
+    padding: 0px;
+}
+.console_tooltip {
+    z-index: 100;
+}
+
+/* ========================================================================
+                                END HEADER
+========================================================================= */
+
+/* ========================================================================
+                                START NAVBAR
+========================================================================= */
+.navbar-fixed-top {
+
+}
+
+.navbar-default {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2196F3;
+    border: none;
+    z-index: 99;
+}
+
+.navbar-default .navbar-brand {
+    background-image: url(/images/logo.png);
+    background-size: auto 41px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline-block;
+    height: 56px;
+    width: 56px;
+}
+
+.navbar-default .container {
+    color: #FFFFFF;
+    height: 56px;
+    line-height: 56px;
+    display: table;
+    position: relative;
+    width: 100%;
+}
+
+.navbar-default .navbar-nav {
+    height: 100%;
+    margin: 0;
+    height: 56px;
+    overflow: hidden;
+}
+
+.navbar-default .navbar-nav li {
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    float: left;
+    padding: 0;
+    display: inline-block;
+}
+
+.navbar-default .navbar-nav li:hover, .navbar-default .navbar-nav li.active {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-default .navbar-nav li:hover a {
+    color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav li a {
+    color: #FFFFFF;
+    background: none !important;
+    font-size: 1rem;
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+    color: #FFFFFF;
+}
+
+
+/* ========================================================================
+                                END NAVBAR
+========================================================================= */
+
+/* ========================================================================
+                                START FOOTER
+========================================================================= */
+.footer {
+    background: #727272;
+}
+
+.footer .footer-copyright {
+    color: #b6b6b6;
+    text-align: center;
+    padding: 20px 0px;
+    border-top: 1px solid #727272;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer a:hover {
+    color: #212121;
+}
+
+/* ========================================================================
+                                END FOOTER
+========================================================================= */
+
+
+/* ========================================================================
+                                START WIDGETS
+========================================================================= */
+.widget {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-left: 40px;
+}
+
+.widget .widget-title {
+    font-size: 21px;
+    margin-bottom: 20px;
+    line-height: 1.5em;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#widget-footer .widget {
+    color: #b6b6b6;
+}
+
+#homepage-sidebar-1 {
+    background-color: #BBDEFB;
+    color: #fff;
+}
+
+#homepage-sidebar-1 .widgettitle {
+    color: #1976D2;
+    margin: 0;
+}
+
+#homepage-sidebar-1 h3 small {
+    color: #FFFFFF;
+    font-size: 50%;
+}
+
+#homepage-sidebar-1 h3 a {
+    color: #FFFFFF;
+}
+
+#homepage-sidebar-1 h3 a:hover {
+    color: #1976D2;
+}
+
+#homepage-sidebar-1 .search-submit {
+    font-size: 20px;
+    margin-top: -36px;
+    padding: 13px 18px;
+}
+
+#homepage-sidebar-1 .carousel {
+    width: 600px;
+}
+
+#homepage-sidebar-1 .carousel .h4 {
+    
+}
+
+#homepage-sidebar-2 {
+    background-color: #FFFFFF;
+}
+
+#homepage-sidebar-2 .dataset-theme-selector {
+    margin-top: 50px;
+}
+
+.dataset-theme-selector .sectionWhoIcon {
+    height: 55px;
+}
+
+.dataset-theme-selector .sectionWhatIcon {
+    height: 55px;
+}
+
+.dataset-theme-selector ul li a {
+    font-size: 28px;
+    font-weight: 300;
+    padding: 25px 15px;
+}
+
+.dataset-theme-selector ul li a:hover {
+    color: #1976D2;
+}
+
+.dataset-theme-selector .dl-horizontal {
+    margin-top: 45px;
+}
+
+.dataset-theme-selector .dl-horizontal dt {
+    width: 70px;
+}
+
+.dataset-theme-selector .dl-horizontal dt img {
+    width: 60px;
+}
+
+.dataset-theme-selector .dl-horizontal dd {
+    margin-left: 85px;
+    padding-bottom: 30px;
+}
+
+.dataset-theme-selector .dl-horizontal ul li a {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 25px 15px;
+}
+
+#homepage-sidebar-2 #sectionWho i {
+    
+}
+
+#homepage-sidebar-2 #sectionWhat i {
+    
+}
+
+#homepage-sidebar-3 {
+    background-color: #BBDEFB;
+    color: #FFFFFF;
+}
+
+.search-datasets-homepage {
+    font-weight: 400;
+    font-size: 22px;
+}
+
+#search-header {
+    height: 56px;
+    width: 650px;
+    margin-bottom: 2.6em;
+}
+
+/* ========================================================================
+                                END WIDGETS
+========================================================================= */
+
+
+
+
+
+
+
+
+
+body, html {
+    font-family: 'Roboto', sans-serif;
+    color: #212121;
+    font-size: 15px;
+    line-height: 1.6em;
+    height: 100%;
+    background: #fff;
+}
+
+a {
+    outline: none;
+}
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+a:hover {
+    color: #c90000;
+    text-decoration: none;
+    outline: none;
+}
+
+b {
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #2196F3;
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.1;
+}
+h1 {
+    font-size: 4.2rem;
+    margin: 2.1rem 0 1.68rem 0;
+}
+h2 {
+    font-size: 3.56rem;
+    margin: 1.78rem 0 1.424rem 0;
+}
+h3 {
+    font-size: 2.92rem;
+    margin: 1.46rem 0 1.168rem 0;
+}
+h4 {
+    font-size: 2.28rem;
+    margin: 1.14rem 0 0.912rem 0;
+}
+h5 {
+    font-size: 1.64rem;
+    margin: 0.82rem 0 0.656rem 0;
+}
+h6 {
+    font-size: 1rem;
+    margin: 0.5rem 0 0.4rem 0;
+}
+

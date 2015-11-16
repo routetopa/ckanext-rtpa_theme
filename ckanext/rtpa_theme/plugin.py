@@ -7,7 +7,14 @@ class Rtpa_ThemePlugin(plugins.SingletonPlugin):
 
     # IConfigurer
 
-    def update_config(self, config_):
-        toolkit.add_template_directory(config_, 'templates')
-        toolkit.add_public_directory(config_, 'public')
+    def update_config(self, config):
+        toolkit.add_template_directory(config, 'templates')
+        toolkit.add_public_directory(config, 'public')
+
         toolkit.add_resource('fanstatic', 'rtpa_theme')
+
+    ## IRoutes
+    def before_map(self, map):
+        controller = 'ckanext.rtpa_theme.controllers:ViewController'
+        map.redirect('/', '/dataset')
+        return map
