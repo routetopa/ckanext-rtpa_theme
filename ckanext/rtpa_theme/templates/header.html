@@ -11,14 +11,78 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" title="RTPA - TET" href="http://tet.dev"></a>
+                <a class="navbar-brand" title="RTPA - TET" href="#"></a>
             </div>
 
             <div class="collapse navbar-collapse navbar-responsive-collapse">
                 <!--  TODO serialize to .json  -->
-                <ul id="menu-main-menu" class="nav navbar-nav"><li id="menu-item-4" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item active"><a href="http://tet.dev/">Welcome to TET</a></li>
-                    <li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://tet.dev/index.php/illud-feugait/">Illud feugait</a></li>
-                    <li id="menu-item-13" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://tet.dev/index.php/ne-vim-volumus/">Ne vim volumus</a></li>
+                <ul id="menu-main-menu" class="nav navbar-nav">
+                    {% block header_site_navigation_tabs %}
+                        {{ h.build_nav_main(
+                          ('search', _('Datasets')),
+                          ('organizations_index', _('Organizations')),
+                          ('group_index', _('Groups')),
+                          ('about', _('About'))
+                        ) }}
+                    {% endblock %}
+                    
+                    {% if c.userobj %}
+
+                        {% block header_account_logged %}
+                        {% if c.userobj.sysadmin %}
+                          <li>
+                            <a href="{{ h.url_for(controller='admin', action='index') }}" title="{{ _('Sysadmin settings') }}">
+                              <i class="icon-legal" aria-hidden="true"></i>
+                              <span class="text">{{ _('Admin') }}</span>
+                            </a>
+                          </li>
+                        {% endif %}
+                        <li>
+                          <a href="{{ h.url_for(controller='user', action='read', id=c.userobj.name) }}" class="image" title="{{ _('View profile') }}">
+                            {{ h.gravatar((c.userobj.email_hash if c and c.userobj else ''), size=22) }}
+                            <span class="username">{{ c.userobj.display_name }}</span>
+                          </a>
+                        </li>
+                        {% set new_activities = h.new_activities() %}
+                        <li class="notifications {% if new_activities > 0 %}notifications-important{% endif %}">
+                          {% set notifications_tooltip = ngettext('Dashboard (%(num)d new item)', 'Dashboard (%(num)d new items)', new_activities) %}
+                          <a href="{{ h.url_for(controller='user', action='dashboard') }}" title="{{ notifications_tooltip }}">
+                            <i class="icon-dashboard" aria-hidden="true"></i>
+                            <span class="text">{{ _('Dashboard') }}</span>
+                            <span class="badge">{{ new_activities }}</span>
+                          </a>
+                        </li>
+                        {% block header_account_settings_link %}
+                          <li>
+                            <a href="{{ h.url_for(controller='user', action='edit', id=c.userobj.name) }}" title="{{ _('Edit settings') }}">
+                              <i class="icon-cog" aria-hidden="true"></i>
+                              <span class="text">{{ _('Settings') }}</span>
+                            </a>
+                          </li>
+                        {% endblock %}
+                        {% block header_account_log_out_link %}
+                          <li>
+                            <a href="{{ h.url_for('/user/_logout') }}" title="{{ _('Log out') }}">
+                              <i class="icon-signout" aria-hidden="true"></i>
+                              <span class="text">{{ _('Log out') }}</span>
+                            </a>
+                          </li>
+                        {% endblock %}
+                        {% endblock %}
+                      </ul>
+                    </div>
+                  {% else %}
+                    <nav class="account not-authed">
+                      <ul class="unstyled">
+                        {% block header_account_notlogged %}
+                        <li>{% link_for _('Log in'), controller='user', action='login' %}</li>
+                        {% if h.check_access('user_create') %}
+                          <li>{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
+                        {% endif %}
+                        {% endblock %}
+                      </ul>
+                    </nav>
+                  {% endif %}
                 </ul>
                 <div class="tet_console_right">
 

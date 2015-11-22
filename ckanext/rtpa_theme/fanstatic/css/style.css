@@ -228,6 +228,12 @@ div.tet_console_lang_item:hover > span {
     margin: 0;
     height: 56px;
     overflow: hidden;
+    clear: none !important;
+}
+
+.navbar-responsive-collapse {
+    width: auto;
+    float: left;
 }
 
 .navbar-default .navbar-nav li {
