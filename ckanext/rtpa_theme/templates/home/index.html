@@ -1,0 +1,25 @@
+{% ckan_extends %}
+
+{% block title %}{{ _("TET homepage") }} - {{ super() }}{% endblock %}
+
+{% block content %}
+  <div id="content" class="container homepage">
+    {{ self.flash() }}
+    <div class="wrapper">
+      <div class="hero">
+        <div class="intro">
+          <h1>{{ _('Welcome to TET Platform')}}</h1>
+          <p>Transparency-Enhancing Toolset (TET) is the next-generation open data portal containing set of tools that facilitate a better understanding of the data by providing connections and links to related datasets, and providing information about provenance.</p>
+        </div>
+          
+        <form class="search-box clearfix" method="get" action="{% url_for controller='package', action='search' %}">
+          <span class="control-group search-giant">
+            <input type="text" class="search" name="q" value="{{ c.q }}" autocomplete="off" placeholder="{{ _('Search datasets...') }}" />
+            <button type="submit" value="{{ _('Search') }}">Submit</button>
+          </span>
+        </form>
+          
+      </div>
+    </div>
+  </div>
+{% endblock %}
