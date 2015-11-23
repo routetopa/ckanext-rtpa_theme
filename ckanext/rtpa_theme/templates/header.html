@@ -11,7 +11,7 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" title="RTPA - TET" href="#"></a>
+                <a class="navbar-brand" title="RTPA - TET" href="http://srvgal100.deri.ie:8081/"></a>
             </div>
 
             <div class="collapse navbar-collapse navbar-responsive-collapse">
@@ -69,19 +69,14 @@
                           </li>
                         {% endblock %}
                         {% endblock %}
-                      </ul>
-                    </div>
-                  {% else %}
-                    <nav class="account not-authed">
-                      <ul class="unstyled">
+                    {% else %}
+
                         {% block header_account_notlogged %}
-                        <li>{% link_for _('Log in'), controller='user', action='login' %}</li>
+                          <li>{% link_for _('Log in'), controller='user', action='login' %}</li>
                         {% if h.check_access('user_create') %}
                           <li>{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
                         {% endif %}
                         {% endblock %}
-                      </ul>
-                    </nav>
                   {% endif %}
                 </ul>
                 <div class="tet_console_right">

@@ -260,7 +260,7 @@ div.tet_console_lang_item:hover > span {
     font-family: Lato, sans-serif !important;
     color: #FFFFFF !important;
     background: none !important;
-    font-size: 1rem !important;
+    font-size: 15px !important;
     display: inline-block;
     padding: 0 15px;
 }
