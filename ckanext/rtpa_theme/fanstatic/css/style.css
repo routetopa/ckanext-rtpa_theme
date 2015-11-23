@@ -439,7 +439,9 @@ div.tet_console_lang_item:hover > span {
 ========================================================================= */
 
 
-
+.masonry-brick .media-image {
+    width: 100%;
+}
 
 
 
