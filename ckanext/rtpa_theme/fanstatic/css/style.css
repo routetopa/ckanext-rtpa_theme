@@ -199,7 +199,7 @@ div.tet_console_lang_item:hover > span {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #2196F3;
+    background-color: #2196F3 !important;
     border: none;
     z-index: 99;
 }
@@ -215,9 +215,10 @@ div.tet_console_lang_item:hover > span {
 }
 
 .navbar-default .container {
-    color: #FFFFFF;
-    height: 56px;
-    line-height: 56px;
+    color: #FFFFFF !important;
+    height: 56px !important;
+    line-height: 56px !important;
+    font-size: 15px !important;
     display: table;
     position: relative;
     width: 100%;
