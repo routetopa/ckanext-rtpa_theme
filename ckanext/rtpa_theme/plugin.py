@@ -15,5 +15,6 @@ class Rtpa_ThemePlugin(plugins.SingletonPlugin):
     ## IRoutes
     def before_map(self, map):
         controller = 'ckanext.rtpa_theme.controllers:ViewController'
-        # map.redirect('/', '/dataset')
+        # disable home page
+        map.redirect('/', '/dataset')
         return map

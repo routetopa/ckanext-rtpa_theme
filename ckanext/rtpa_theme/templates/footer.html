@@ -15,6 +15,11 @@
                         <li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="http://tet.dev/index.php/feedback/">Feedback</a></li>
                     </ul>
                 </div>
+                
+                {% block footer_lang %}
+                    {% snippet "snippets/language_selector.html" %}
+                {% endblock %}
+
             </div>
         </div>
 
@@ -26,7 +31,7 @@
     <div class="footer-copyright">
         © RTPA – TET
     </div> <!-- end .footer-copyright -->
-
+       
     {% block footer_debug %}
         {% if g.debug %}
             {% include 'snippets/debug.html' %}
