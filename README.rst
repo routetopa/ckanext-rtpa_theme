@@ -59,9 +59,11 @@ To install ckanext-rtpa_theme:
 
      . /usr/lib/ckan/default/bin/activate
 
-2. Install the ckanext-rtpa_theme Python package into your virtual environment::
+2. Import repository from github.com::
 
-     pip install ckanext-rtpa_theme
+    git clone https://github.com/routetopa/ckanext-rtpa_theme.git
+    cd ckanext-rtpa_theme
+    python setup.py develop
 
 3. Add ``rtpa_theme`` to the ``ckan.plugins`` setting in your CKAN
    config file (by default the config file is located at
@@ -81,19 +83,6 @@ Document any optional config settings here. For example::
     # The minimum number of hours to wait before re-checking a resource
     # (optional, default: 24).
     ckanext.rtpa_theme.some_setting = some_default_value
-
-
-------------------------
-Development Installation
-------------------------
-
-To install ckanext-rtpa_theme for development, activate your CKAN virtualenv and
-do::
-
-    git clone https://github.com/arekstasiewicz/ckanext-rtpa_theme.git
-    cd ckanext-rtpa_theme
-    python setup.py develop
-    pip install -r dev-requirements.txt
 
 
 -----------------
