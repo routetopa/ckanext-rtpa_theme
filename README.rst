@@ -68,7 +68,7 @@ To install ckanext-rtpa_theme:
      
 5. Start CKAN environment::
 
-    paster serve /ect/ckan/default/production.ini
+    paster serve /ect/ckan/default/development.ini
 
 
 
