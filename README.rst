@@ -32,7 +32,8 @@
 ckanext-rtpa_theme
 =============
 
-Rtpa_Theme is a graphical overlay for ckan platform - it makes it look like RouteToPA Project (link :http://vmegov01.deri.ie/en). 
+Rtpa_Theme is a graphical overlay for ckan platform - it makes it look like RouteToPA Project. 
+(link to original website :http://vmegov01.deri.ie/en). 
 
 
 
