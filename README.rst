@@ -66,7 +66,7 @@ To install ckanext-rtpa_theme:
    sudo service apache2 reload
      
 5. Start CKAN environment::
-   
+
    paster serve /etc/ckan/default/development.ini
 
 
