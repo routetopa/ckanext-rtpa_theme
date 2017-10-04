@@ -32,17 +32,9 @@
 ckanext-rtpa_theme
 =============
 
-.. Put a description of your extension here:
-   What does it do? What features does it have?
-   Consider including some screenshots or embedding a video!
+Rtpa_Theme is a graphical overlay for ckan platform - it makes it look like RouteToPA Project (link :http://vmegov01.deri.ie/en). 
 
 
-------------
-Requirements
-------------
-
-For example, you might want to mention here which versions of CKAN this
-extension works with.
 
 
 ------------
@@ -71,18 +63,12 @@ To install ckanext-rtpa_theme:
 
 4. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu::
 
-     sudo service apache2 reload
+   sudo service apache2 reload
+     
+5. Start CKAN environment::
+   
+   paster serve /etc/ckan/default/development.ini
 
-
----------------
-Config Settings
----------------
-
-Document any optional config settings here. For example::
-
-    # The minimum number of hours to wait before re-checking a resource
-    # (optional, default: 24).
-    ckanext.rtpa_theme.some_setting = some_default_value
 
 
 -----------------
