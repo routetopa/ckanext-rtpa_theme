@@ -63,11 +63,17 @@ To install ckanext-rtpa_theme:
 
 4. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu::
 
-   sudo service apache2 reload
+    git clone https://github.com/routetopa/ckanext-rtpa_theme.git
+    cd ckanext-rtpa_theme
+    python setup.py develop
+
      
 5. Start CKAN environment::
 
-   paster serve /etc/ckan/default/development.ini
+    git clone https://github.com/routetopa/ckanext-rtpa_theme.git
+    cd ckanext-rtpa_theme
+    python setup.py develop
+
 
 
 
